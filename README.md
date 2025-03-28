@@ -4,19 +4,19 @@ This repository will ultimately contain all code and documentation to generate t
 
 NASA's Surface Biology and Geology (SBG) Mission Visible to Shortwave Infrared (VSWIR) terrestrial vegetation algorithm team has committed to providing demonstration products for the following variables (Figure 1):
 
-    1. Canopy Water Content (CWC)/ Equivalent Water Thickness (EWT) (Units: cm), 
-    2. Leaf Mass Per Area (LMA) (Units: g m-2)
-    3. Foliar Nitrogen (N) (Units: g N/g dry mass)
-    4. Leaf Water Content (LWC) (Units: %) - leaf level water as % of fresh leaf weight 
+    1. Equivalent Water Thickness (EWT) (Units: cm), 
+    2. Top of Canopy Nitrogen  (N) (Units: g N/g dry mass) 
+    3. Top of Leaf Mass Per Area (LMA) (Units: g m-2)
+    4. Top of Canopy Leaf Water Content (LWC) (Units: % - leaf level water as % of fresh leaf weight)
 
 <figure>
-    <img src="fig/readme_veg_diagram.jpeg" alt="Figure 1: Proposed demonstration products for SBG" width="800" height = "350">
+    <img src="docs/figs/readme_veg_diagram.jpeg" alt="Figure 1: Proposed demonstration products for SBG" width="800" height = "350">
     <figcaption style="font-style: italic; margin-bottom: 20px;">Figure 1: Proposed SBG terrestrial vegetation demonstration products. </figcaption>
 </figure>
 
 
 
-CWC will be calculated using the Bohn et al, 2020 three phases of water approach. Currently, the the team is focused on using a partial least squares regression (PLSR) framework for trait estimates of LMA, Foliar N, and LWC; however, this algorithm approach still requires further research and testing at the plot, airborne, and space born scales. 
+EWT will be calculated using the Bohn et al, 2020 three phases of water approach. Currently, the the team is focused on using a partial least squares regression (PLSR) framework for trait estimates of LMA, Foliar N, and LWC; however, this algorithm approach still requires further research and testing at the plot, airborne, and space born scales. 
 This repository contains two ATBD documents in the `docs` folder describing the two current algorithm approaches:
 
 1) [EWT_ATDB.md](docs/EWT_ATBD.md) - describes the Bohn et al, 2018 method for CWC calculation. 
@@ -31,7 +31,7 @@ To streamline the community's ability to develop and test terrestrial vegetation
 PLANTS is a PostGIS ER database deployed on Amazon Relational Database Services (AWS-RDS). It extends PostgreSQL's capabilities by supporting the storage, indexing, and querying of spatial data. The SQL-based ER architecture is flexible and can be redesigned under a version control system to incorporate other existing dataset structures from the SBG community and partners (e.g., SHIFT, EnSpec, NEON, Your data!) on an open platform that ensures data is findable, accessible, interoperable, and reusable. 
 
 <figure>
-    <img src="fig/PLANTS_database.png" alt="Figure 2: Plants database" width="500">
+    <img src="docs/figs/PLANTS_database.png" alt="Figure 2: Plants database" width="500">
     <figcaption style="font-style: italic; margin-bottom: 20px;">Figure 2: SBG Plant Traits and Spectral (PLANTS) database. </figcaption>
 </figure> 
 
